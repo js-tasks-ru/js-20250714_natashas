@@ -5,5 +5,17 @@
  * @returns {object} - returns the new object
  */
 export const omit = (obj, ...fields) => {
-
+  const fieldsArray=[...fields];
+  let objEntries = Object.entries(obj);
+  let newObj = {};
+ 
+ for (let i = 0; i < objEntries.length; i++) {   
+    let a = objEntries[i];
+    if (fieldsArray.includes(a[0])) {        
+       continue; // Skip the fields that are to be omitted
+    } else {
+      newObj[a[0]] = a[1]; // Add the remaining fields to the new object
+    }   
+ }
+ return newObj;
 };
