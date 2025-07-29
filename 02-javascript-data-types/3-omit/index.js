@@ -6,11 +6,11 @@
  */
 export const omit = (obj, ...fields) => {
   const fieldsArray=[...fields];
-  let objEntries = Object.entries(obj);
+  const objEntries = Object.entries(obj);
   let newObj = {};
  
  for (let i = 0; i < objEntries.length; i++) {   
-    let a = objEntries[i];
+    const a = objEntries[i];
     if (fieldsArray.includes(a[0])) {        
        continue; // Skip the fields that are to be omitted
     } else {

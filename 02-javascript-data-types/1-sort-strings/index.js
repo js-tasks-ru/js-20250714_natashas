@@ -16,5 +16,5 @@ export function sortStrings(arr, param = 'asc') {
     return sortedArray;
 
 }
-//   понять почему не работает
+
 //  return sortedArray = [...arr].sort((a,b) => (a.localeCompare(b, ['ru', 'en'],{caseFirst:"upper"}) <= 0 ? ((param === 'asc') ? -1 : 1) : ((param === 'desc') ? 1 : -1)));
