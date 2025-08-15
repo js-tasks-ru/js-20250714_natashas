@@ -6,11 +6,6 @@
 export function uniq(arr) {
     if(!arr || arr.length === 0) {
         return [];
-    }
-    const uniqSet = new Set(arr);
-    let uniqArray = [];
-    for (let uniq of uniqSet) {
-        uniqArray.push(uniq);
-    }
-    return uniqArray;
+    }    
+    return Array.from(new Set(arr));
 }
